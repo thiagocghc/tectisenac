@@ -94,3 +94,5 @@ O site não traz números de credibilidade (anos de experiência, quantidade de 
 - A branch `main` é a versão publicada.
 - Alterações novas vão em uma branch própria e entram na `main` por **pull request**, com aprovação do administrador.
 - Mensagens de commit em português, descrevendo o que mudou.
+- Nomes de branch seguem o padrão `tipo/assunto`, por exemplo `docs/readme-ajustes`.
+- Cada pull request traz uma descrição curta do que muda e de como revisar.
