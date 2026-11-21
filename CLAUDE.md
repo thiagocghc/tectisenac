@@ -6,10 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Landing page estática de **Thiago Almeida, especialista em tecnologia da informação e consultor de infraestrutura de TI**. Todo o conteúdo do site é em português do Brasil (`lang="pt-BR"`).
 
-Não há build, dependências, linter nem testes. As únicas dependências externas são as fontes Unbounded e Hanken Grotesk, carregadas do Google Fonts.
+Não há build, dependências, linter nem testes. As únicas dependências externas são as fontes Unbounded e Hanken Grotesk, carregadas do Google Fonts. A única parte com servidor é o formulário de contato (`enviar.php`, PHP).
 
 ```
 index.html       marcação da página
+contato.html     página com o formulário de contato (nome, e-mail, telefone, mensagem)
+enviar.php       recebe o formulário, valida, envia e-mail e guarda em data/mensagens.txt (ignorado pelo git)
+js/contato.js    validação do formulário e envio por fetch
 css/style.css    todo o CSS (não use <style> nem style="" no HTML)
 js/script.js     ano do rodapé + animação da rede no hero (canvas)
 assets/img/      pasta para imagens (hoje vazia, o site não usa fotos)

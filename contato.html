@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08060f">
+    <title>Fale comigo | Thiago Almeida</title>
+    <meta name="description" content="Envie uma mensagem para Thiago Almeida, consultor de infraestrutura de TI. Informe nome, e-mail, telefone e conte o que você precisa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="largura topo-barra">
+            <a href="index.html" class="marca">
+                <span class="marca-sigla">TA</span>
+                <span>Thiago Almeida</span>
+            </a>
+            <nav class="menu" aria-label="Principal">
+                <a href="index.html#servicos">Serviços</a>
+                <a href="index.html#metodo">Consultoria</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="contato.html" aria-current="page">Contato</a>
+            </nav>
+            <a class="btn btn-pequeno" href="https://wa.me/5567984026511?text=Ol%C3%A1%2C%20Thiago!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20infraestrutura%20de%20TI." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="secao pagina-contato">
+            <div class="largura formulario-grade">
+                <div class="formulario-intro">
+                    <h1 class="titulo-pagina">Conte o que você precisa</h1>
+                    <p>Preencha o formulário e eu respondo o mais rápido possível, por e-mail ou telefone. O orçamento é sem compromisso.</p>
+                    <a class="link-seta" href="index.html">Voltar para o início</a>
+                </div>
+
+                <form class="formulario" id="form-contato" action="enviar.php" method="post" novalidate>
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" maxlength="100" required aria-describedby="erro-nome">
+                        <p class="campo-erro" id="erro-nome" role="alert"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email" maxlength="150" required aria-describedby="erro-email">
+                        <p class="campo-erro" id="erro-email" role="alert"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(67) 90000-0000" maxlength="20" required aria-describedby="erro-telefone">
+                        <p class="campo-erro" id="erro-telefone" role="alert"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" maxlength="2000" required aria-describedby="erro-mensagem"></textarea>
+                        <p class="campo-erro" id="erro-mensagem" role="alert"></p>
+                    </div>
+
+                    <div class="campo-isca" aria-hidden="true">
+                        <label for="site">Não preencha este campo</label>
+                        <input type="text" id="site" name="site" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button class="btn btn-grande" type="submit" id="btn-enviar">Enviar</button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="largura rodape-barra">
+            <span>&copy; <span id="ano"></span> Thiago Almeida</span>
+            <span>Consultor de infraestrutura de TI</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contato.js"></script>
+</body>
+</html>

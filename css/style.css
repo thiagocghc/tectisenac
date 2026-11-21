@@ -492,11 +492,98 @@ h3 { font-size: 1rem; line-height: 1.35; }
     gap: 8px 24px;
 }
 
+/* Página de contato */
+.pagina-contato { padding: 72px 0 96px; }
+
+.formulario-grade {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.titulo-pagina {
+    font-size: clamp(1.6rem, 3.4vw, 2.5rem);
+    line-height: 1.15;
+    max-width: 16ch;
+}
+
+.formulario-intro p {
+    margin: 20px 0 28px;
+    color: var(--texto-suave);
+    max-width: 44ch;
+}
+
+.formulario {
+    display: grid;
+    gap: 20px;
+    padding: 32px;
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 13px 14px;
+    font: inherit;
+    color: var(--texto);
+    background: var(--fundo);
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo textarea { resize: vertical; min-height: 140px; }
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--neon);
+    box-shadow: 0 0 0 3px rgba(194, 107, 255, 0.25);
+}
+
+.campo input[aria-invalid="true"],
+.campo textarea[aria-invalid="true"] { border-color: var(--magenta); }
+
+.campo-erro {
+    margin-top: 6px;
+    font-size: 0.875rem;
+    color: var(--magenta);
+}
+
+.campo-erro:empty { display: none; }
+
+.campo-isca {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.formulario .btn { width: 100%; cursor: pointer; font: inherit; font-weight: 600; }
+.formulario .btn:disabled { opacity: 0.6; cursor: wait; }
+
+.form-status { font-size: 0.95rem; }
+.form-status:empty { display: none; }
+.form-status.ok { color: var(--sinal); }
+.form-status.erro { color: var(--magenta); }
+
 /* Responsivo */
 @media (max-width: 900px) {
     .servicos-grade,
     .sobre-grade,
-    .contato-grade { grid-template-columns: 1fr; }
+    .contato-grade,
+    .formulario-grade { grid-template-columns: 1fr; }
     .servicos-intro { position: static; }
     .trilha { grid-template-columns: 1fr 1fr; row-gap: 40px; }
     .trilha::before { display: none; }
@@ -528,4 +615,6 @@ h3 { font-size: 1rem; line-height: 1.35; }
     .canal-nome { grid-column: 2; }
     .canal-valor { grid-column: 2; }
     .btn-grande { width: 100%; }
+    .pagina-contato { padding: 48px 0 64px; }
+    .formulario { padding: 20px; }
 }
